@@ -25,9 +25,6 @@ argv.map.forEach((element) => {
   proxy.register(source, target);
 });
 
-// proxy.register("localhost/api", "http://localhost:3000/api");
-// proxy.register("localhost/form", "http://localhost:4200/form");
-// proxy.register("localhost/secure", "http://localhost:4201/secure");
-// proxy.register("localhost/globo", "http://globo.com");
-
-console.log(argv);
+if (argv.verbose) {
+  console.debug(argv);
+}
