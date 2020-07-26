@@ -1,6 +1,6 @@
 {
   "name": "instant-proxy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A mini proxy for development purposes",
   "main": "app.js",
   "scripts": {
