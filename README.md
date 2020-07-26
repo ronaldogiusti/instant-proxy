@@ -1,7 +1,7 @@
 # instant-proxy
 A mini proxy for development purposes
 
-Instant Proxy is a very simple reverse proxy based on [Redbird] (https://github.com/OptimalBits/redbird) that can be started and configured with command line options.
+Instant Proxy is a very simple reverse proxy based on [Redbird](https://github.com/OptimalBits/redbird) that can be started and configured with command line options.
 This can be useful when you have several 
 
 ## Usage
@@ -22,7 +22,7 @@ node app.js -p 5000 --map "localhost/api, http://localhost:3000/api" "localhost/
 ```
 
 ## TO-DO
-- SSL support
+- SSL support :heavy_check_mark: [commit](https://github.com/ronaldogiusti/instant-proxy/commit/87b765140e0f78a97dbbd7fd43ec57ab43f34209)
 - Accept config file as an input
 - Registered routes built-in info page
 - Docker
