@@ -8,14 +8,34 @@ const proxy = require("redbird")({
   },
 });
 
+if (argv.file) {
+  processInputFile();
+}
+
 argv.map.forEach((element) => {
-  const source = element.split(",")[0].trim();
-  const target = element.split(",")[1].trim();
-  proxy.register(source, target, {
-    ssl: argv.ssl,
-  });
+  registerHostMapping(element);
 });
 
 if (argv.verbose) {
   console.debug(argv);
+}
+
+function registerHostMapping(hostEntry) {
+  if (hostEntry) {
+    const source = hostEntry.split(",")[0].trim();
+    const target = hostEntry.split(",")[1].trim();
+    proxy.register(source, target, {
+      ssl: argv.ssl,
+    });
+  }
+}
+
+function processInputFile() {
+  const fs = require("fs");
+  try {
+    const data = fs.readFileSync(argv.file, "utf8");
+    data.split(/[\r\n]+/).forEach((element) => registerHostMapping(element));
+  } catch (e) {
+    console.error("Error reading file:", e.stack);
+  }
 }
