@@ -40,7 +40,7 @@ node app.js -p 5000 --file /home/dev/myproject/hostentries.txt
 
 ## TO-DO
 - SSL support :heavy_check_mark: [commit](https://github.com/ronaldogiusti/instant-proxy/commit/87b765140e0f78a97dbbd7fd43ec57ab43f34209)
-- Accept config file as an input :heavy_check_mark: [commit] (https://github.com/ronaldogiusti/instant-proxy/commit/ff9a2d0915e1299f1c803f14851dbea672638e00)
+- Accept config file as an input :heavy_check_mark: [commit](https://github.com/ronaldogiusti/instant-proxy/commit/ff9a2d0915e1299f1c803f14851dbea672638e00)
 - Registered routes built-in info page
 - Error handling
 - Docker
