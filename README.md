@@ -1,3 +1,5 @@
+![Node.js CI](https://github.com/ronaldogiusti/instant-proxy/workflows/Node.js%20CI/badge.svg)
+
 # instant-proxy
 A mini proxy for development purposes
 
